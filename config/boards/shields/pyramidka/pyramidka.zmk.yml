@@ -1,0 +1,11 @@
+file_format: "1"
+id: pyramidka
+name: pyramidka
+type: shield
+url: https://github.com/aroum/pyramidka/
+requires:
+  - rp_pico
+features:
+  - keys
+siblings:
+  - pyramidka

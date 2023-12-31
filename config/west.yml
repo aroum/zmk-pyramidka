@@ -1,0 +1,11 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/alinelena
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: mlego_rp2040
+      import: app/west.yml
+  self:
+    path: config
