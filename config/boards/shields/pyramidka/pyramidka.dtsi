@@ -21,7 +21,7 @@ default_transform: keymap_transform_0 {
 RC(0,0) RC(0,1) RC(0,2) RC(0,3) 	RC(1,4) RC(1,5) RC(1,6) RC(1,7)		RC(2,8) RC(2,9) RC(2,10) RC(2,11) 
 	    RC(3,1) RC(3,2) RC(3,3) RC(3,4)		RC(4,5) RC(4,6) RC(4,7) RC(4,8) 	RC(5,9) RC(5,10) RC(5,11) 
 		        RC(6,2) RC(6,3) RC(6,4) RC(6,5)		RC(7,6) RC(7,7) RC(7,8) RC(7,9)		RC(8,10) RC(8,11) 
-		                RC(9,3) RC(10,4)	RC(9,6) RC(9,7)		RC(10,8) RC(10,9) RC(10,10) RC(10,11) 
+		                RC(9,3) RC(9,4)	RC(9,6) RC(9,7)		RC(10,8) RC(10,9) RC(10,10) RC(10,11) 
         >;
     };
 
