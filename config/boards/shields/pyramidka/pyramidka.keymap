@@ -59,14 +59,14 @@
                 default_layer {
 // ------------------------------------------------------------------------------------------------
 //|  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  |  [  |  ]  |
-//   |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |  ;|  '  |
+//   |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |  ;  |  '  |
 //      |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  ,  |  .  |  /  |
-//         |  RSE  | SPC | LWR |  LWR |  BKSP | RSE | BKSP |  RSE  |
+//         |  `  | RSE | LWR | SPC | BKSP | LWR | RSE |BKSP |  -  |
 bindings = <
-&mt LWIN RBKT &kp Q &kp W &kp E &kp R &kp T &kp Y  &kp U  &kp I     &kp O   &kp P    &mt LWIN LBKT
-&mt LCTRL A   &kp S &kp D &kp F &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
+&mt LWIN RBKT &kp Q &kp W &kp E &kp R &kp T  &kp Y  &kp U     &kp I   &kp O          &kp P         &mt LWIN LBKT
+&mt LCTRL A   &kp S &kp D &kp F &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI       &mt RCTRL SQT
 &mt LALT  Z   &kp X &kp C &kp V &kp B &kp N  &kp M  &kp COMMA &kp DOT &mt LALT FSLH
-&kp GRAVE  &lt RSE TAB &lt LWR ENTER &mt LSHFT SPACE &mt LSHFT BSPC &lt LWR ESC &lt RSE DEL &kp MINUS
+&kp GRAVE     &lt RSE TAB &lt LWR ENTER      &mt LSHFT SPACE  &mt LSHFT BSPC   &lt LWR ESC &lt RSE DEL &kp MINUS
 >;
                 };
                 lower_layer {
@@ -74,34 +74,34 @@ bindings = <
 //|  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7   |  F8  |  F9  |  F10  |  F11  |  F12  |
 //   |  !  |  @  |  #  |  $  |  %  |  ^  |  &   |  *  |  (  |  )  |  \  |
 //      |  1  |  2  |  3  |  4  |  5  |  6  |  7   |  8  |  9  |  0  |
-//         |  RSE  | SPC | LWR |  LWR |  BKSP | RSE | BKSP |  RSE  |
+//         |  `  | RSE | LWR | SPC | BKSP | LWR | RSE |BKSP |  -  |
                         bindings = <
-    &mt LWIN   F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6  &kp F7  &kp F8 &kp F9 &kp F10 &kp F11 &mt LWIN F12 
-    &mt LCTRL  EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET  &kp AMPS &kp STAR &kp LPAR &kp RPAR &mt LCTRL BSLH  
-    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &mt LALT  N0
-    &kp GRAVE  &lt ADJ TAB &lt LWR ENTER &mt LSHFT SPACE &mt LSHFT BSPC &lt LWR ESC &lt ADJ DEL &kp MINUS
+    &mt LWIN   F1  &kp F2      &kp F3   &kp F4   &kp F5    &kp F6    &kp F7   &kp F8   &kp F9   &kp F10      &kp F11        &mt LWIN F12 
+    &mt LCTRL EXCL &kp AT      &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR     &mt LCTRL BSLH  
+    &mt LALT N1    &kp N2      &kp N3   &kp N4   &kp N5    &kp N6    &kp N7   &kp N8   &kp N9   &mt LALT  N0
+    &kp GRAVE      &lt ADJ TAB &lt LWR ENTER &mt LSHFT SPACE &mt LSHFT BSPC &lt LWR ESC &lt ADJ DEL &kp EQUAL
                         >;
                 };
                 raise_layer {
 // ------------------------------------------------------------------------------------------------
-//|     |     |     |     |     |     |      |     |     |     |     |     |
-//   |     | WIN | ALT | CTR |     | LEFT | DOWN | UP | RIGHT|     |     |
-//      |     |     |     |     |     |     |      |     |  .  |  /  |
-//         |  RSE  | SPC | LWR |  LWR |  BKSP | RSE | BKSP |  RSE  |
+//| WIN |     |  VU  |  PgUp   |PAUSE| HOME| HOME|PAUSE| PgUp|  VU  |     | WIN |
+//   | CTRL| LEFT| UP | DOWN| RIGHT| LEFT| DOWN | UP | RIGHT|     | CTRL|
+//      | ALT |  VD | PgDn|  SCR  | END  | END |  > | PgDn|  VD |  ALT  |
+//         |  `  | RSE | LWR | SPC | BKSP | LWR | RSE |BKSP |  -  |
                         bindings = <
-    &kp LWIN  &bootloader  &none     &none      &none &none     &kp PG_UP  &kp HOME      &kp C_VOL_UP  &kp C_PAUSE  &none     &kp LWIN
-    &kp LCTRL &sk LWIN     &sk LALT  &sk LCTRL  &none &kp LEFT  &kp DOWN   &kp UP        &kp RIGHT  &none         &kp LCTRL
-    &kp LALT  &none        &none     &none      &none &kp PG_DN &kp END    &kp C_VOL_DN  &none      &kp LALT 
-    &kp GRAVE  &lt RSE TAB &lt ADJ ENTER &mt LSHFT SPACE &mt LSHFT BSPC &lt ADJ ESC &lt RSE DEL &kp MINUS
+    &kp LWIN  &none        &kp C_VOL_UP &kp PG_UP     &kp C_PP  &kp HOME &kp HOME &kp C_PP  &kp PG_UP    &kp C_VOL_UP &none     &kp LWIN
+    &kp LCTRL &kp LEFT     &kp UP       &kp DOWN      &kp RIGHT &kp LEFT &kp DOWN &kp UP    &kp RIGHT    &none        &kp LCTRL
+    &kp LALT  &kp C_VOL_DN &kp PG_DN    &kp LG(LS(S)) &kp END   &kp END  &grtsgn  &kp PG_DN &kp C_VOL_DN &kp LALT 
+    &kp GRAVE &lt RSE TAB  &lt ADJ ENTER &mt LSHFT SPACE &mt LSHFT BSPC &lt ADJ ESC &lt RSE DEL &kp MINUS
                         >; 
                 };
                                 adjust_layer {
 // ------------------------------------------------------------------------------------------------
 //|  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  |  [  |  ]  |
-//   |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |  ;|  '  |
+//   |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |  ;  |  '  |
 //      |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  ,  |  .  |  /  |
-//         |  RSE  | SPC | LWR |  LWR |  BKSP | RSE | BKSP |  RSE  |              |     |     |     |   |     |     |     |
-bindings = <
+//         |  `  | RSE | LWR | SPC | BKSP | LWR | RSE |BKSP |  -  |
+                        bindings = <
 &bootloader &none &none &none &none &none &none &none &none &none &none &none
 &none &none &none &none &none &none &none &none &none &none &none
 &none &none &none &none &none &none &none &none &none &none
