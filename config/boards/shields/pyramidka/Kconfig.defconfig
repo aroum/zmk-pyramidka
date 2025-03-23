@@ -3,7 +3,7 @@
 if PYRAMIDKA
 
 config ZMK_KEYBOARD_NAME
-	default "peramidka"
+	default "pyramidka"
 	
 endif
 
